@@ -23,8 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header( 'shop' ); ?>
 
 	<section class="banner flexslider">
-		<ul class="slides">
-		</ul>
+		
 	</section>
 
 	<div class="subpage-container">
@@ -53,16 +52,8 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_after_main_content' );
 	?>
-
-	<?php
-		/**
-		 * woocommerce_sidebar hook.
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		do_action( 'woocommerce_sidebar' );
-	?>
-
+	
+		<div class="clear"></div>
 	</div>
 
 <?php get_footer( 'shop' );

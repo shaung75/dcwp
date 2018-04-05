@@ -22,5 +22,41 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
+$price_html = $product->get_price_html();
+
+$price_html_array = price_array($price_html);
+
+function price_array($price){
+    $del = array('<span class="amount">', '</span>','<del>','<ins>');
+    $price = str_replace($del, '', $price);
+    $price = str_replace('</del>', '|', $price);
+    $price = str_replace('</ins>', '|', $price);
+    $price_arr = explode('|', $price);
+    $price_arr = array_filter($price_arr);
+    return $price_arr;
+}
 ?>
-<p class="price"><?php echo $product->get_price_html(); ?></p>
+
+<?php 
+	// Regular Price
+	if( count($price_html_array) == 1):
+?>
+	
+		<strong style="font-size:20px; color:#c60200;">
+			<span id="itemprice"><?php echo $price_html_array[0];?></span>
+		</strong><br/>
+
+<?php
+	// Product on Sale
+	else:
+?>
+		<strong style="color:#c60200;">
+			<strike><span id="itemprice"><?php echo $price_html_array[0];?></span></strike>
+		</strong>
+		&nbsp;&nbsp;&nbsp;
+		<strong style="font-size:20px; color:#c60200;">
+			<span id="itemprice"><?php echo $price_html_array[1];?></span>
+		</strong><br/>
+<?php
+	endif;
+?>
