@@ -21,6 +21,7 @@
 
 <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,height=device-height,target-densitydpi=device-dpi,user-scalable=no" />
 <link type="text/css" rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/default.css"/>
+<link type="text/css" rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/style.css" />
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery-1.12.2.min.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/web.js"></script>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/fancybox/jquery.fancybox.js"></script>
@@ -29,7 +30,7 @@
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery.flexslider.js"></script>
 
 <style>
-  body { background: none; }
+  body { /* background: none; */ }
   nav { background:#590b0b; }
 </style>
 

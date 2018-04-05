@@ -38,19 +38,17 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 
 <div id="andymainimg">
 	<div class="prod-img-large">
-		<div style="height: 250px; width: 250px" class="zoomWrapper">
-			<?php
-				if ( has_post_thumbnail() ) {
-					
-					$img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+		<?php
+			if ( has_post_thumbnail() ) {
+				
+				$img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 
-					echo '<img id="zoom_03" src="'.$img[0].'" data-id="'.$loop->post->ID.'" onclick="showImgPopup(\'\');" data-zoom-img="'.$img[0].'" style="position: absolute;">';
-				}
-			?>
-		</div>
+				echo '<img id="zoom_03" src="'.$img[0].'" data-id="'.$loop->post->ID.'" onclick="showImgPopup(\'\');" data-zoom-img="'.$img[0].'" style="position: absolute;">';
+			}
+		?>
 	</div>
 	<script>
-        $(window).load(function() {
+    $(window).load(function() {
 			$('.flexslider.prod-img-thumb').flexslider({
 				animation: "slide",
 				animationLoop: false,
@@ -63,10 +61,40 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 				
 			});
 		});
-    </script>
+  </script>
 </div>
 
+<?php
+	do_action( 'woocommerce_product_thumbnails' );
+?>
 
+<script>
+	$(function(){
+		$('.fancybox.levarply').fancybox();	
+	});
+
+	function dipaly_Swap(received_id){
+		var url="<?php echo $global_site_url['site_url']; ?>ajax_file.php";
+		var image_id=received_id;
+		var prod_id=$("#product_id").val();
+		$.post(url,{"choice":"showpics","image_Id":image_id,"product_id":prod_id},function(res){
+			$("#andymainimg").html(res);
+			$('.flexslider.prod-img-thumb').flexslider({
+				animation: "slide",
+				animationLoop: false,
+				itemWidth: 50,
+				itemMargin: 5,
+				minItems: 1,
+				maxItems: 7,
+				controlNav: false,
+				directionNav: true
+			});
+			
+			$("#zoom_03").elevateZoom({gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true, loadingIcon: ''});
+            $("#zoom_03").bind("click", function(e) { var ez = $('#zoom_03').data('elevateZoom');	$.fancybox(ez.getGalleryList()); return false; });
+		});
+	}
+</script>
 
 <div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
 	<figure class="woocommerce-product-gallery__wrapper">
@@ -78,9 +106,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 			$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src() ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
 			$html .= '</div>';
 		}
-
-		//echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );
-
+		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );
 		do_action( 'woocommerce_product_thumbnails' );
 		?>
 	</figure>

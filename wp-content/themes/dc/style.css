@@ -5,3 +5,7 @@ Description: Wordpress and WooCommerce template for Daddy Cool's Chilli Sauce
 Version: 0.0.1
 Tags: chilli
 */
+
+.iconic-woothumbs-all-images-wrap {
+	float: none !important;
+}
