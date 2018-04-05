@@ -28,7 +28,19 @@ global $product;
 $attachment_ids = $product->get_gallery_image_ids();
 
 if ( $attachment_ids && has_post_thumbnail() ) {
+
+	$html .= '';
+	$html  = '<ul class="slides" style="width: 600%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">';
+	
 	foreach ( $attachment_ids as $attachment_id ) {
-		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', wc_get_gallery_image_html( $attachment_id  ), $attachment_id );
+		//echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', wc_get_gallery_image_html( $attachment_id  ), $attachment_id );
+		
+		$image_attributes = wp_get_attachment_image_src( $attachment_id );
+
+		$html .= '<li onclick="dipaly_Swap(\''.$attachment_id.'\')" style="width: 50px; float: left; display: block;"><img src="'.$image_attributes[0].'"></li>';
 	}
+
+	$html .= '</ul>';
+
+	echo $html;
 }

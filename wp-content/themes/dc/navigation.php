@@ -22,11 +22,12 @@
         <a href="<?php echo get_bloginfo( 'wpurl' );?>/contact">Contact</a>
 
         <?php 
+            /*
             wp_nav_menu( array( 
                 'container_class' => 'my_extra_menu_class',
                 'container' => 'span',
                 'theme_location' => 'header-menu'
             ) );
-
+            */
         ?>
 </nav>
