@@ -99,18 +99,21 @@ function getSearchProducts(){
                         <input id="top_search_box" name="top_search_box" type="text" placeholder="Enter product name or keyword" />
                         <input type="submit" class="_butn" value="" />
                     </form>
+
+                    <?php 
+                      if ( is_user_logged_in() ) {
+                    ?>
+                        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','woothemes'); ?>"><img src="<?php echo get_bloginfo('template_directory'); ?>/img/member-icon.png" />&nbsp; <?php _e('My Account','woothemes'); ?></a>
                     <?php
-
-           if(isset($_SESSION['user_name']) && isset($_SESSION['user_id'])){
-          ?>
-                    <a href="<?php echo get_bloginfo( 'wpurl' );?>/my-account"><img src="<?php echo get_bloginfo('template_directory'); ?>/img/member-icon.png" /> My Account&nbsp; <a href="<?php echo get_bloginfo( 'wpurl' );?>/user_logout">Logout</a>
-
-                    <?php }else{ ?>
-                    <a href="<?php echo get_bloginfo( 'wpurl' );?>/login"><img src="<?php echo get_bloginfo('template_directory'); ?>/img/member-icon.png" />Login</a>
-                    <?php } ?>
+                      } else { 
+                    ?>
+                        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register','woothemes'); ?>"><img src="<?php echo get_bloginfo('template_directory'); ?>/img/member-icon.png" /><?php _e('Login / Register','woothemes'); ?></a>
+                    <?php
+                      }
+                    ?>
 
                     <a href="<?php echo get_bloginfo( 'wpurl' );?>/cart">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/cart-icon.png" /> My Cart(5)
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/cart-icon.png" /> My Cart(<?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?>)
                     </a>
                     <a class="nav-toggle-butn"><img src="<?php echo get_bloginfo('template_directory'); ?>/img/menu_button.png" /></a>
                     <a class="srch-toggle-butn"><img src="<?php echo get_bloginfo('template_directory'); ?>/img/srch-icon.png" /></a>
