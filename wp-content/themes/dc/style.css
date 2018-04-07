@@ -9,3 +9,10 @@ Tags: chilli
 .iconic-woothumbs-all-images-wrap {
 	float: none !important;
 }
+.quantity .qty {
+	line-height: 18px;
+	padding: 5px;
+	border: 1px solid #c60200;
+	margin-right: 10px;
+	width: 40px;
+}
