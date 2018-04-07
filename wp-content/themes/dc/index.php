@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 
-<?php include('banner.php'); ?>
+<?php 
+	if(is_front_page()):
+		include('banner.php');
+	endif;
+?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
