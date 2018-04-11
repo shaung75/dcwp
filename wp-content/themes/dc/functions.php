@@ -1,9 +1,9 @@
 <?php
 
-/*
-	Fucntions file for Daddy Cool's Chilli Sacue
-*/
-
+/**
+ * Register menu for Daddy Cool theme
+ * @return [type] [description]
+ */
 function register_dc_menu() {
   register_nav_menu('header-menu',__( 'Header Menu' ));
 }
@@ -14,6 +14,11 @@ function dcwp_add_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'dcwp_add_woocommerce_support' );
 
+/**
+ * Returns a shorter version of the excerpt
+ * @param  int      $limit  Number of characters
+ * @param  string   $source Content to shorten. Defaults to the ecerpt
+ */
 function get_excerpt($limit, $source = null){
   if($source == "content" ? ($excerpt = get_the_content()) : ($excerpt = get_the_excerpt()));
   $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
