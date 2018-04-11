@@ -1,4 +1,5 @@
 <nav>
+    <!--
         <a href="<?php echo get_bloginfo( 'wpurl' );?>">Home</a>
 
         <span>
@@ -20,14 +21,14 @@
         <a href="<?php echo get_bloginfo( 'wpurl' );?>/whole_enq">Wholesale Enquiry</a>
         <a href="<?php echo get_bloginfo( 'wpurl' );?>/coming_soon">Coming Soon!</a>
         <a href="<?php echo get_bloginfo( 'wpurl' );?>/contact">Contact</a>
-
-        <?php 
-            /*
-            wp_nav_menu( array( 
+    -->
+        <?php
+            wp_nav_menu( array(
                 'container_class' => 'my_extra_menu_class',
-                'container' => 'span',
-                'theme_location' => 'header-menu'
+                'container' => '',
+                'theme_location' => 'header-menu',
+                'walker' => new DC_Walker(),
+                'items_wrap' => '%3$s'
             ) );
-            */
         ?>
 </nav>
