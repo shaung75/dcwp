@@ -4,6 +4,14 @@
 	// Display Banner on home page
 	if(is_front_page()):
 		include('banner.php');
+	else:
+?>
+
+<section class="banner flexslider">
+
+</section>
+
+<?php
 	endif;
 ?>
 

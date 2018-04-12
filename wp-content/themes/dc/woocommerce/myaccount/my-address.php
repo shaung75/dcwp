@@ -48,14 +48,25 @@ $col    = 1;
 <?php foreach ( $get_addresses as $name => $title ) : ?>
 
 	<div class="u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-<?php echo ( ( $oldcol = $oldcol * -1 ) < 0 ) ? 1 : 2; ?> woocommerce-Address">
-		<header class="woocommerce-Address-title title">
-			<h3><?php echo $title; ?></h3>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'woocommerce' ); ?></a>
-		</header>
-		<address><?php
-			$address = wc_get_account_formatted_address( $name );
-			echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' );
-		?></address>
+		
+		<div class="box_panel">
+      <div class="_title"><?php echo $title; ?></div>
+      <div class="_content">
+      	<address>
+      		<?php
+						$address = wc_get_account_formatted_address( $name );
+						echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' );
+					?>
+				</address>
+				<br/>
+      	<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit">
+      		<button class="alt butn-1">
+      			<?php _e( 'Edit', 'woocommerce' ); ?>
+      		</button>
+      	</a>
+      </div>
+    </div>
+	
 	</div>
 
 <?php endforeach; ?>

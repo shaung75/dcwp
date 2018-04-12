@@ -23,6 +23,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
+<div class="title_1">My Profile</div>
+
+<?php wc_get_template( 'myaccount/my-address.php' ); ?>
+
+<?php wc_get_template( 'myaccount/orders.php' ); ?>
+
+
 <p><?php
 	/* translators: 1: user display name 2: logout url */
 	printf(
