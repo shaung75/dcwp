@@ -20,9 +20,34 @@
 ?>
 	<h1 class="cont-heading">Best Sellers</h1>
 
-	<div style="border: 2px solid #f00;">
-		<p><strong>TODO: Bestsellers</strong></p>
-	</div>
+	<ul class="prod-list">
+	<?php
+		$args = array(
+			'post_type' => 'product',
+			'posts_per_page' => 20,
+			'orderby' => 'rand'
+			);
+		$loop = new WP_Query( $args );
+		if ( $loop->have_posts() ) {
+			while ( $loop->have_posts() ) : $loop->the_post();
+	?>
+			<li>
+				<div class="cover-img">
+					<a href="<?php the_permalink();?>">
+						<?php woocommerce_template_loop_product_thumbnail();?>
+					</a>
+				</div>
+
+				<h4><?php the_title();?></h4>
+			</li>
+	<?php
+			endwhile;
+		} else {
+			echo __( 'No products found' );
+		}
+		wp_reset_postdata();
+	?>
+	</ul><!--/.products-->
 <?php
 	endif;
 ?>
