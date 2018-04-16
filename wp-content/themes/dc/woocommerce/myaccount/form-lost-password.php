@@ -22,24 +22,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 wc_print_notices(); ?>
 
-<form method="post" class="woocommerce-ResetPassword lost_reset_password">
 
-	<p><?php echo apply_filters( 'woocommerce_lost_password_message', esc_html__( 'Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.', 'woocommerce' ) ); ?></p><?php // @codingStandardsIgnoreLine ?>
+<div class="contenter">
+	<br>
+	<br>
+	<form method="post" class="form-1 clear-fx woocommerce-ResetPassword lost_reset_password" style="width:400px; margin:0 auto;">
 
-	<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
-		<label for="user_login"><?php esc_html_e( 'Username or email', 'woocommerce' ); ?></label>
-		<input class="woocommerce-Input woocommerce-Input--text input-text" type="text" name="user_login" id="user_login" />
-	</p>
+		<h3>Reset Password</h3>
 
-	<div class="clear"></div>
+		<label for="user_login"><?php esc_html_e( 'Email Address:', 'woocommerce' ); ?></label>
+		<input class="woocommerce-Input woocommerce-Input--text input-text" type="email" name="user_login" id="user_login" />
 
-	<?php do_action( 'woocommerce_lostpassword_form' ); ?>
 
-	<p class="woocommerce-form-row form-row">
+		<?php do_action( 'woocommerce_lostpassword_form' ); ?>
+
+		<br>
+		<br>
+
 		<input type="hidden" name="wc_reset_password" value="true" />
-		<button type="submit" class="woocommerce-Button button" value="<?php esc_attr_e( 'Reset password', 'woocommerce' ); ?>"><?php esc_html_e( 'Reset password', 'woocommerce' ); ?></button>
-	</p>
+		<button type="submit" class="butn-1 pull-right" value="<?php esc_attr_e( 'Reset password', 'woocommerce' ); ?>">Submit&nbsp;&nbsp;<img src="<?php echo get_bloginfo('template_directory'); ?>/img/arrow-right.png" height="15" style="height: 15px; display:inline-block; vertical-align:middle;"></button>
+	
+		<?php wp_nonce_field( 'lost_password' ); ?>
 
-	<?php wp_nonce_field( 'lost_password' ); ?>
-
-</form>
+	</form>
+</div>
