@@ -27,7 +27,67 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php wc_get_template( 'myaccount/my-address.php' ); ?>
 
-<?php wc_get_template( 'myaccount/orders.php' ); ?>
+<?php
+$customer_orders = get_posts( array(
+    'numberposts' => -1,
+    'meta_key'    => '_customer_user',
+    'meta_value'  => get_current_user_id(),
+    'post_type'   => wc_get_order_types(),
+    'post_status' => array_keys( wc_get_order_statuses() ),
+) );
+?>
+<div class="box_panel">
+	<div class="_title">Order History</div>
+	<div class="_content">
+		<div class="table_panel">
+			<div class="_th">
+				<div class="_td">Order</div>
+				<div class="_td">Date</div>
+				<div class="_td">Status</div>
+				<div class="_td">Total</div>
+				<div class="_td">Actions</div>
+			</div>
+
+		<?php
+			if(count($customer_orders) > 0):
+				// Customer has orders
+				foreach($customer_orders as $customer_order):
+					$wc_order = wc_get_order($customer_order->ID);
+					//echo "<pre>";
+					//print_r($wc_order);
+					//echo "</pre>";
+		?>
+					<div class="_tr">
+						<div class="_td">
+							<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') );?>&view-order=<?php echo $customer_order->ID;?>"><?php echo $customer_order->ID;?></a>
+						</div>
+						<div class="_td">
+							<?php echo date_format(date_create($customer_order->post_date), "F d, Y");?>
+						</div>
+						<div class="_td">
+							<?php echo $wc_order->status;?>
+						</div>
+						<div class="_td">
+							&pound;<?php echo $wc_order->total;?>
+						</div>
+						<div class="_td">
+							<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') );?>&view-order=<?php echo $customer_order->ID;?>">View</a>
+						</div>
+					</div>
+		<?php
+				endforeach;
+			else:
+				// Customer does not
+		?>
+				You have not place any orders so far.
+		<?php                         
+      endif;
+		?>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+<?php //wc_get_template( 'myaccount/orders.php' ); ?>
 
 
 <p><?php

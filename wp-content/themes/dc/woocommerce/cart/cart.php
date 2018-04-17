@@ -27,7 +27,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+	<table class="cust-table-1 _cart shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 		<thead>
 			<tr>
 				<th class="product-remove">&nbsp;</th>
@@ -64,7 +64,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 						</td>
 
-						<td class="product-thumbnail"><?php
+						<td class="product-thumbnail">
+							<div class="_prod-img">
+							<?php
 						$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
 						if ( ! $product_permalink ) {
@@ -72,7 +74,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 						} else {
 							printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail );
 						}
-						?></td>
+						?>
+							</div>
+						</td>
 
 						<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>"><?php
 						if ( ! $product_permalink ) {

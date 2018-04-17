@@ -105,12 +105,12 @@ function getSearchProducts(){
                     <?php
                       } else { 
                     ?>
-                        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register','woothemes'); ?>"><img src="<?php echo get_bloginfo('template_directory'); ?>/img/member-icon.png" /><?php _e('Login / Register','woothemes'); ?></a>
+                        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register','woothemes'); ?>"><img src="<?php echo get_bloginfo('template_directory'); ?>/img/member-icon.png" /><?php _e('Login','woothemes'); ?></a>
                     <?php
                       }
                     ?>
 
-                    <a href="<?php echo get_bloginfo( 'wpurl' );?>/cart">
+                    <a href="<?php echo WC()->cart->get_cart_url();?>">
                     <img src="<?php echo get_bloginfo('template_directory'); ?>/img/cart-icon.png" /> My Cart(<?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?>)
                     </a>
                     <a class="nav-toggle-butn"><img src="<?php echo get_bloginfo('template_directory'); ?>/img/menu_button.png" /></a>

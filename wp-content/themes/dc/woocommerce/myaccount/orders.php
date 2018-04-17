@@ -25,7 +25,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
 <?php if ( $has_orders ) : ?>
-
 <div class="box_panel">
 	<div class="_title">Order History</div>
 	<div class="_content">
@@ -44,12 +43,14 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 				?>
 			</div>
 			
-			<div class="_tr">
+			
 				<?php 
 					foreach ( $customer_orders->orders as $customer_order ) :
 						$order      = wc_get_order( $customer_order );
 						$item_count = $order->get_item_count();
-						
+				?>
+					<div class="_tr">
+				<?php
 						foreach ( wc_get_account_orders_columns() as $column_id => $column_name ) :
 				?>
 							<div class="_td">
@@ -86,8 +87,9 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 								<?php endif; ?>
 							</div>
 						<?php endforeach; ?>
+				</div>
 			<?php endforeach; ?>
-			</div>
+			
 
 			<div class="clear"></div>
 		</div>
