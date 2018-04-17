@@ -101,7 +101,7 @@ function getSearchProducts(){
                     <?php 
                       if ( is_user_logged_in() ) {
                     ?>
-                        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','woothemes'); ?>"><img src="<?php echo get_bloginfo('template_directory'); ?>/img/member-icon.png" />&nbsp; <?php _e('My Account','woothemes'); ?></a>
+                        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','woothemes'); ?>"><img src="<?php echo get_bloginfo('template_directory'); ?>/img/member-icon.png" />&nbsp; <?php _e('My Account','woothemes'); ?></a> <a href="<?php echo wp_logout_url( get_permalink( woocommerce_get_page_id( 'myaccount' ) ) );?>">Logout</a>
                     <?php
                       } else { 
                     ?>
