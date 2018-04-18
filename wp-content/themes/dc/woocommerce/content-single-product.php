@@ -69,4 +69,14 @@ if ( post_password_required() ) {
 	</div>
 </div>
 
+<?php
+	// Show some related products
+	$args = array(
+	        'posts_per_page' => 3,
+	        'columns' => 3,
+	        'orderby' => 'rand'
+	 );
+    woocommerce_related_products( apply_filters( 'woocommerce_output_related_products_args', $args ) );
+?>
+
 <?php do_action( 'woocommerce_after_single_product' ); ?>

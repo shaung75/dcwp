@@ -58,3 +58,4 @@ class DC_Walker extends Walker_Nav_Menu {
     $output .= (in_array("menu-item-has-children", $item->classes)) ? "</span>" : "" ;
 	}
 }
+
