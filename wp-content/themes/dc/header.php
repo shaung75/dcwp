@@ -29,6 +29,10 @@
 <link type="text/css" rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/flexslider.css"/>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery.flexslider.js"></script>
 
+<link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('template_directory'); ?>/bxslider/jquery.bxslider.css">
+<script src="<?php echo get_bloginfo('template_directory'); ?>/bxslider/plugins/jquery.fitvids.js"></script>
+<script src="<?php echo get_bloginfo('template_directory'); ?>/bxslider/jquery.bxslider.min.js"></script>
+
 <style>
   body { /* background: none; */ }
   nav { background:#590b0b; }

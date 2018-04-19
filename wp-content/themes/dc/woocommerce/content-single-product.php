@@ -70,6 +70,41 @@ if ( post_password_required() ) {
 </div>
 
 <?php
+	// Show some video reviews
+	$vids = get_post_meta($post->ID, 'youtube', false);
+	if( count( $vids ) != 0 ):
+?>
+  <div>
+    <h2>Video Reviews:</h2>
+    <div id="vidreviews">
+      <ul class="bxslider">
+        <?php
+        foreach($vids as $vid) {
+
+        	$ytvid = explode("\n", $vid);
+        	$ytvid[video_desc] = "";
+        	for($i = 1; $i < count($ytvid); $i++) {
+        		$ytvid[video_desc] .= $ytvid[$i] . " ";
+        	}
+        ?>
+        <li>
+          <iframe src="https://www.youtube.com/embed/<?php echo $ytvid[0];?>" frameborder="0" allowfullscreen></iframe>              
+          <p><strong>Comment:</strong> <?php echo stripslashes($ytvid[video_desc]); ?></p>
+        </li>
+        <?php  
+          //print_r($ytvid);  
+          //print_r("<BR>");  
+        }
+        ?>
+      </ul>
+    </div>              
+  </div>
+<?php
+	endif;
+?>
+            <script> $('.bxslider').bxSlider({video: true,useCSS: false}); </script>
+
+<?php
 	// Show some related products
 	$args = array(
 	        'posts_per_page' => 3,
