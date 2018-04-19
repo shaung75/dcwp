@@ -93,11 +93,9 @@ function getSearchProducts(){
                 </a>
                 <img src="<?php echo get_bloginfo('template_directory'); ?>/img/punchline-img.png" class="logo-txt" />
                 <div class="header-right">
-                    <form class="srch-box" action="<?php echo $global_site_url['site_url'];?>?action=header_search" onSubmit="return getSearchProducts();" >
-                        <input id="top_search_box" name="top_search_box" type="text" placeholder="Enter product name or keyword" />
-                        <input type="submit" class="_butn" value="" />
-                    </form>
-
+                    
+                    <?php get_search_form();?>  
+                    
                     <?php 
                       if ( is_user_logged_in() ) {
                     ?>
