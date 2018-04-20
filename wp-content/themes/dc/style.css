@@ -16,3 +16,15 @@ Tags: chilli
 	margin-right: 10px;
 	width: 40px;
 }
+
+#pack_size {
+	padding: 10px;
+	border: 2px solid #c60200;
+	background: #fff;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+.woocommerce-variation-price .woocommerce-Price-amount {
+	font-size: 20px;
+	color: #c60200;
+}
