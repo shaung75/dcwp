@@ -29,24 +29,34 @@ include('wp-config.local.php');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '0iN)fD  P.!gi4]Cbq#ifbfv46,97m)mDfx&Pu`s:dXuba_h(b0(QV8H}Ff#BKbm');
-define('SECURE_AUTH_KEY',  '>7Z<CDSh5`Q:V&lK>evGwWayU:SoO7Zcbsa|$A.P#jpBU{lL=tHvoo~zX}3q,B,M');
-define('LOGGED_IN_KEY',    'VRxz4s_a8Q{H0SF)AdlHUH[2g@BtDHG0_!Ch+UbIHrg0uy3ubau<wtrdd/pB S,t');
-define('NONCE_KEY',        'nC_,r10IK,-2N2z<#8K.a2xxZ8!w5f_QrYnLOpIy&cE{[y`#Db3?YVKL?bViK:1~');
-define('AUTH_SALT',        'LjAD9+;^4eb}v*xrAAf7|CR$FPF,Mb;pJvXafHzI|D?Lq?y@ fm;QfF& sYU<6X1');
-define('SECURE_AUTH_SALT', '+xe2zUU:6<{7ME.i.z-k )Gfoy5rQgLV|HUizKZ_Xg`%6|J3/Z3Ta5UzuqkkB-.f');
-define('LOGGED_IN_SALT',   'wS<Gc{-c${5CDT]Xm$)1{6KYTm;g}KnZPIW6=gic[-X]1@dXc{?h(S3VIFAt1Ex6');
-define('NONCE_SALT',       ')W+f[NZsE~2.Z^be`sJ.Sqb8o]mMo%Mt~FNeB0%uEvN1r@/pFn+|eguWE_}dZAf}');
+define('AUTH_KEY',         '^F=t^ZJUh=dyYLOA=f-O/Hri/=ZkMfkD3NS7C9aYEKbetrDPMjcCbUYT+GX+M1Jj');
+define('SECURE_AUTH_KEY',  'qd)9HE=GBDG44xH4IYYV-O^nK00=iAGyNKtM8yG0p52Zep2(vdsV9f9L+h34_VlV');
+define('LOGGED_IN_KEY',    '9MrNf)sYgTfN3gzwCDfdv#h)gmdDFdnai/saPtrSR#KbpX6nQCrBURhKYa6cF-EK');
+define('NONCE_KEY',        '5)977MMJW0#)5A9fT4utXB0AGKYdfJtL6cF1lR9_Fvy^0M7Sq0FOs8_GzStc/f(I');
+define('AUTH_SALT',        'y_00O0zovxKWArCMjm-b-HOEmRqBKdb)1(MmnYQflCCE(B!#Y))h6Qdu-y9mpGLq');
+define('SECURE_AUTH_SALT', 'ErCr82pg6j#jP(eyL4xmHQL-+QaSV#0U7zApemP6C==srOzgJzC803)EutG1zrU(');
+define('LOGGED_IN_SALT',   'tI5^zRlfh3XOP3UGbbj7=DgqA30T3(Mqd(s)!_/L!p3_JfLlVDG4)Oopunv+7KW(');
+define('NONCE_SALT',       'sbxJFqX+O^V5wR-PZms4q+fUE1thxpKr)Z0MZTUtVdY^dhNtRqhXB3#3u(BA5Y2d');
 
 /**#@-*/
 
 /**
  * WordPress Database Table prefix.
  *
- * You can have multiple installations in one database if you give each
- * a unique prefix. Only numbers, letters, and underscores please!
+ * You can have multiple installations in one database if you give each a unique
+ * prefix. Only numbers, letters, and underscores please!
  */
 $table_prefix  = 'wp_';
+
+/**
+ * WordPress Localized Language, defaults to English.
+ *
+ * Change this to localize WordPress. A corresponding MO file for the chosen
+ * language must be installed to wp-content/languages. For example, install
+ * de.mo to wp-content/languages and set WPLANG to 'de' to enable German
+ * language support.
+ */
+define('WPLANG', '');
 
 /**
  * For developers: WordPress debugging mode.
@@ -54,19 +64,24 @@ $table_prefix  = 'wp_';
  * Change this to true to enable the display of notices during development.
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
- *
- * For information on other constants that can be used for debugging,
- * visit the Codex.
- *
- * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
+
+/**
+ *  Change this to true to run multiple blogs on this installation.
+ *  Then login as admin and go to Tools -> Network
+ */
+define('WP_ALLOW_MULTISITE', false);
 
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
-  define('ABSPATH', dirname(__FILE__) . '/');
+	define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+/* Destination directory for file streaming */
+define('WP_TEMP_DIR', ABSPATH . 'wp-content/');
+

@@ -49,6 +49,10 @@
 	?>
 	</ul><!--/.products-->
 <?php
+	else:
+?>
+	<h1 class="cont-heading"><?php the_title();?></h1>
+<?php
 	endif;
 ?>
 

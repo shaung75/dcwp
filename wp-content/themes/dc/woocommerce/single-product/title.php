@@ -21,3 +21,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 the_title( '<h1 class="product_title entry-title">', '</h1>' );
+
+// Show the heat rating
+if ( get_post_meta(get_the_id(), 'heat', true) && get_post_meta(get_the_id(), 'heat', true) >= 0 && get_post_meta(get_the_id(), 'heat', true) <= 6 ) :
+
+	$rating = get_post_meta(get_the_id(), 'heat', true);
+
+	echo '<img style="display:block;" src="'.get_bloginfo('template_directory').'/img/Chilli'.$rating.'.png" height="40">';
+
+endif;

@@ -37,7 +37,17 @@ global $product;
 <?php
   else:
 ?>
+  <?php
+    if($product->regular_price):
+  ?>
     <h3>&pound;<?php echo $product->regular_price;?></h3>
+  <?php
+    else:
+  ?>
+    <h3>From &pound;<?php echo $product->price;?></h3>
+  <?php
+    endif;
+  ?>
 <?php
   endif;
 ?>
