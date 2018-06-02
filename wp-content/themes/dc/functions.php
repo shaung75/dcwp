@@ -32,6 +32,12 @@ function get_excerpt($limit, $source = null){
 }
 
 /**
+ * Add thumbnails
+ */
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'blog-thumb', 138, 150, true );
+
+/**
  * Navigation Walker
  */
 class DC_Walker extends Walker_Nav_Menu {
