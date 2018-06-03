@@ -38,6 +38,16 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'blog-thumb', 138, 150, true );
 
 /**
+ * Add class to blog navigation links
+ */
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="butn-1"';
+}
+
+/**
  * Navigation Walker
  */
 class DC_Walker extends Walker_Nav_Menu {

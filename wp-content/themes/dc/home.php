@@ -28,9 +28,25 @@
 
 		</li>
 
-		<?php endwhile; endif; ?>
+		<?php endwhile; ?>
+
+		<?php else : ?>
+			
+			<li><?php _e('Sorry, no posts matched your criteria.'); ?></li>
+		
+		<?php endif; ?>
 
 	</ul>
+
+	<div class="clear"></div>
+	
+	<div style="text-align: center">	
+
+		<hr style="height: 1px; background: #c60200; border: none;margin: 20px 0px;">
+		
+		<?php previous_posts_link( 'Newer posts' ); ?> <?php next_posts_link( 'Older posts' ); ?>
+
+	</div>
 
 </div>
 
