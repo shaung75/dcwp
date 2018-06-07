@@ -5,10 +5,44 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1 ">
 <title><?php echo get_bloginfo( 'name' ); ?></title>
 
-<meta property="og:url" content="<?php echo get_bloginfo( 'wpurl' );?><?php if ($_SERVER['REQUEST_URI'] != "/") { echo $_SERVER['REQUEST_URI']; } ?>"/>
-<meta property="og:title" content="<?php echo get_bloginfo( 'name' ); ?>"/>
-<meta property="og:description" content="<?php echo get_bloginfo( 'description' ); ?>"/>
+<?php
+  /**
+   * Get featured image
+   */
+  if (has_post_thumbnail( $post->ID ) ):
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+  else:
+    $image[] = get_bloginfo('template_directory') . '/img/daddycools.png';
+  endif;
+
+  /**
+   * Get current URL
+   */
+  global $wp;
+  $current_url = home_url( $wp->request );
+
+  /**
+   * Get page title
+   */
+  if (is_front_page()):
+    $title = get_bloginfo( 'name' );
+  elseif (is_product_category()):
+    $title = single_term_title("", false) . ' - ' . get_bloginfo( 'name' );
+  else:
+    $title = get_the_title() . ' - ' . get_bloginfo( 'name' );
+  endif;
+
+  /**
+   * Description
+   */
+  $desc = "We are incredibly proud of our products and are sure there will be something for everyone within our range, we enjoy delivering that home-made and hand made produce to all our customers, why not give us a try";
+
+?>
+<meta property="og:url" content="<?php echo $current_url ?>"/>
+<meta property="og:title" content="<?php echo $title; ?>"/>
+<meta property="og:description" content="<?php echo $desc ?>"/>
 <meta property="og:type" content="website" />
+<meta property="og:image" content="<?php echo $image[0];?>" />
 
 <!--  Favicons and Touch incons -->
 <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_bloginfo('template_directory'); ?>/favicons/apple-touch-icon.png">
