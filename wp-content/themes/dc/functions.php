@@ -54,7 +54,7 @@ add_filter( 'wcwl_join_waitlist_button_classes', 'add_waitlist_button_class' );
 add_filter( 'wcwl_leave_waitlist_button_classes', 'add_waitlist_button_class' );
 function add_waitlist_button_class( $classes ) {
   $classes[] = 'butn-1';
-  return __($classes);
+  return $classes;
 }
 
 /**
