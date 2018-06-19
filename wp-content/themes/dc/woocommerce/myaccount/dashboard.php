@@ -25,6 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="title_1">My Profile</div>
 
+<p>Loyalty Points: <strong><?php echo get_user_meta( get_current_user_id(), 'wc_points_balance', true );?></strong></p>
 <?php wc_get_template( 'myaccount/my-address.php' ); ?>
 
 <?php
