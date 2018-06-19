@@ -32,6 +32,12 @@ if ( $product->is_in_stock() ) : ?>
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 	<form class="cart" action="<?php echo esc_url( get_permalink() ); ?>" method="post" enctype='multipart/form-data'>
+		<?php
+			/**
+			 * @since 2.1.0.
+			 */
+			do_action( 'woocommerce_before_add_to_cart_button' );
+		?>
 		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt butn-1 pull-right">
 
 			<img src="<?php echo get_bloginfo('template_directory'); ?>/img/cart-icon.png">
@@ -42,10 +48,6 @@ if ( $product->is_in_stock() ) : ?>
 
 		<div class="pull-right">
 			<?php
-				/**
-				 * @since 2.1.0.
-				 */
-				do_action( 'woocommerce_before_add_to_cart_button' );
 
 				/**
 				 * @since 3.0.0.
