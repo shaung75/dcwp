@@ -85,3 +85,19 @@ class DC_Walker extends Walker_Nav_Menu {
 	}
 }
 
+/**
+ * Daddy Cool Logo on Login Screen
+ */
+function dc_logo_login() { 
+  $content  = '<style type="text/css">';
+  $content .= 'body.login div#login h1 a {';
+  $content .= 'background-image: url('.get_bloginfo('template_directory') . '/img/daddycools.png'.');';
+  $content .= 'background-size: 185px;';
+  $content .= 'height: 185px;';
+  $content .= 'width: 218px;';
+  $content .= '}'; 
+  $content .= '</style>';
+
+  echo $content;
+}
+add_action( 'login_enqueue_scripts', 'dc_logo_login' );
