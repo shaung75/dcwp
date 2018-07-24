@@ -1,0 +1,755 @@
+/**
+ * @package 	WordPress
+ * @subpackage 	Green Farm
+ * @version 	1.0.8
+ * 
+ * Theme Information
+ * Created by CMSMasters
+ * 
+ */
+
+To update your theme please use the files list from the FILE LOGS below and substitute/add the listed files on your server with the same files in the Updates folder.
+
+Important: after you have updated the theme, in your admin panel please proceed to
+Theme Settings - Fonts and click "Save" in any tab,
+then proceed to 
+Theme Settings - Colors and click "Save" in any tab here.
+
+
+--------------------------------------
+Version 1.0.8: files operations:
+		
+  Theme Files edited:
+		green-farm\theme-framework\theme-style\admin\theme-settings-defaults.php
+		green-farm\theme-framework\theme-style\css\less\style.less
+		green-farm\theme-framework\theme-style\css\style.css
+		green-farm\archive.php
+		green-farm\author.php
+		green-farm\footer.php
+		green-farm\framework\admin\inc\admin-scripts.php
+		green-farm\framework\admin\inc\config-functions.php
+		green-farm\framework\admin\inc\js\admin-theme-scripts.js
+		green-farm\framework\admin\inc\js\wp-color-picker-alpha.js
+		green-farm\framework\admin\options\cmsmasters-theme-options-other.php
+		green-farm\framework\admin\options\cmsmasters-theme-options-post.php
+		green-farm\framework\admin\options\cmsmasters-theme-options-project.php
+		green-farm\framework\admin\options\cmsmasters-theme-options.php
+		green-farm\framework\admin\options\css\cmsmasters-theme-options.css
+		green-farm\framework\admin\options\js\cmsmasters-theme-options-toggle.js
+		green-farm\framework\admin\options\js\cmsmasters-theme-options.js
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-demo.php
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-element.php
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-general.php
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-single.php
+		green-farm\framework\admin\settings\cmsmasters-theme-settings.php
+		green-farm\framework\admin\settings\css\cmsmasters-theme-settings-rtl.css
+		green-farm\framework\admin\settings\css\cmsmasters-theme-settings.css
+		green-farm\framework\admin\settings\inc\cmsmasters-helper-functions.php
+		green-farm\framework\admin\settings\js\cmsmasters-theme-settings.js
+		green-farm\framework\class\browser.php
+		green-farm\framework\function\breadcrumbs.php
+		green-farm\framework\function\general-functions.php
+		green-farm\framework\function\likes.php
+		green-farm\framework\function\pagination.php
+		green-farm\framework\function\theme-categories-icon.php
+		green-farm\framework\function\views.php
+		green-farm\functions.php
+		green-farm\header.php
+		green-farm\image.php
+		green-farm\index.php
+		green-farm\js\cmsmasters-hover-slider.min.js
+		green-farm\js\debounced-resize.min.js
+		green-farm\js\easing.min.js
+		green-farm\js\easy-pie-chart.min.js
+		green-farm\js\jquery.iLightBox.min.js
+		green-farm\js\jquery.isotope.min.js
+		green-farm\js\jquery.script.js
+		green-farm\js\modernizr.min.js
+		green-farm\js\mousewheel.min.js
+		green-farm\js\owlcarousel.min.js
+		green-farm\js\query-loader.min.js
+		green-farm\js\request-animation-frame.min.js
+		green-farm\js\respond.min.js
+		green-farm\js\scroll-to.min.js
+		green-farm\js\scrollspy.js
+		green-farm\js\stellar.min.js
+		green-farm\js\waypoints.min.js
+		green-farm\page.php
+		green-farm\search.php
+		green-farm\sidebar-bottom.php
+		green-farm\single-profile.php
+		green-farm\single-project.php
+		green-farm\single.php
+		green-farm\sitemap.php
+		green-farm\style.css
+		green-farm\theme-framework\plugin-activator.php
+		green-farm\theme-framework\plugins\cmsmasters-contact-form-builder.zip
+		green-farm\theme-framework\plugins\cmsmasters-content-composer.zip
+		green-farm\theme-framework\plugins\LayerSlider.zip
+		green-farm\theme-framework\plugins\revslider.zip
+		green-farm\theme-framework\theme-style\class\theme-widgets.php
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\js\cmsmasters-c-c-theme-extend.js
+		green-farm\theme-framework\theme-style\css\adaptive.css
+		green-farm\theme-framework\theme-style\css\less\adaptive.less
+		green-farm\theme-framework\theme-style\function\single-comment.php
+		green-farm\theme-framework\theme-style\function\template-functions.php
+		green-farm\theme-framework\theme-style\function\theme-colors-secondary.php
+		green-farm\theme-framework\theme-style\postType\blog\post-default.php
+		green-farm\theme-framework\theme-style\postType\blog\post-masonry.php
+		green-farm\theme-framework\theme-style\postType\blog\post-puzzle.php
+		green-farm\theme-framework\theme-style\postType\blog\post-single.php
+		green-farm\theme-framework\theme-style\postType\blog\post-timeline.php
+		green-farm\theme-framework\theme-style\postType\portfolio\project-grid.php
+		green-farm\theme-framework\theme-style\postType\portfolio\project-puzzle.php
+		green-farm\theme-framework\theme-style\postType\portfolio\project-single.php
+		green-farm\theme-framework\theme-style\postType\posts-slider\slider-post.php
+		green-farm\theme-framework\theme-style\postType\posts-slider\slider-project.php
+		green-farm\theme-framework\theme-style\postType\profile\profile-horizontal.php
+		green-farm\theme-framework\theme-style\postType\profile\profile-single.php
+		green-farm\theme-framework\theme-style\postType\profile\profile-vertical.php
+		green-farm\theme-framework\theme-style\postType\quote\quote-grid.php
+		green-farm\theme-framework\theme-style\postType\quote\quote-slider-box.php
+		green-farm\theme-framework\theme-style\postType\quote\quote-slider-center.php
+		green-farm\theme-framework\theme-style\template\404.php
+		green-farm\theme-framework\theme-style\template\header-bot.php
+		green-farm\theme-framework\theme-style\template\header-mid.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\css\less\plugin-style.less
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\day\single-event.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\default-template.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\list\single-event.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\modules\bar.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\modules\meta\details.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\modules\meta\organizer.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\modules\meta\venue.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\map\single-event.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\modules\meta\additional-fields.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\related-events.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\single-organizer.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\single-venue.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\widgets\list-widget.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\widgets\modules\single-event.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\widgets\venue-widget.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\single-event.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\widgets\list-widget.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\less\plugin-adaptive.less
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\plugin-adaptive.css
+		green-farm\woocommerce\cmsmasters-framework\theme-style\function\plugin-fonts.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\global\sidebar.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\global\wrapper-end.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\global\wrapper-start.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\loop\pagination.php
+		green-farm\woocommerce\loop\pagination.php
+		green-farm\theme-framework\languages\green-farm.pot
+		green-farm\tribe-events\cmsmasters-framework\theme-style\css\plugin-style.css
+		green-farm\woocommerce\archive-product.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\cmsmasters-plugin-functions.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\less\plugin-style.less
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\plugin-style.css
+		green-farm\woocommerce\cmsmasters-framework\theme-style\function\plugin-colors.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\function\plugin-template-functions.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\js\jquery.plugin-script.js
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\archive-product.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\content-product.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\content-widget-product.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\loop\loop-start.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\product-searchform.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product-reviews.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product\meta.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product\product-image.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product\product-thumbnails.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product\review.php
+		green-farm\woocommerce\content-widget-product.php
+		green-farm\woocommerce\global\wrapper-end.php
+		green-farm\woocommerce\global\wrapper-start.php
+		green-farm\woocommerce\loop\loop-start.php
+		green-farm\woocommerce\product-searchform.php
+		green-farm\theme-framework\theme-style\css\styles\green-farm.css
+		green-farm\readme.txt
+		green-farm\woocommerce\single-product\product-image.php
+		green-farm\woocommerce\single-product\product-thumbnails.php
+
+
+--------------------------------------
+Version 1.0.7: files operations:
+		
+  Theme Files edited:
+		green-farm\readme.txt
+		green-farm\theme-framework\languages\green-farm.pot
+		green-farm\framework\admin\inc\js\wp-color-picker-alpha.js
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-single.php
+		green-farm\framework\admin\settings\css\cmsmasters-theme-settings.css
+		green-farm\framework\function\general-functions.php
+		green-farm\js\jquery.script.js
+		green-farm\js\scrollspy.js
+		green-farm\sidebar-bottom.php
+		green-farm\sidebar.php
+		green-farm\style.css
+		green-farm\theme-framework\plugin-activator.php
+		green-farm\theme-framework\plugins\cmsmasters-contact-form-builder.zip
+		green-farm\theme-framework\plugins\cmsmasters-content-composer.zip
+		green-farm\theme-framework\plugins\cmsmasters-mega-menu.zip
+		green-farm\theme-framework\plugins\envato-market.zip
+		green-farm\theme-framework\plugins\LayerSlider.zip
+		green-farm\theme-framework\plugins\revslider.zip
+		green-farm\theme-framework\theme-style\admin\theme-settings-defaults.php
+		green-farm\theme-framework\theme-style\class\theme-widgets.php
+		green-farm\theme-framework\theme-style\css\less\style.less
+		green-farm\theme-framework\theme-style\css\style.css
+		green-farm\theme-framework\theme-style\function\template-functions-single.php
+		green-farm\theme-framework\theme-style\postType\blog\post-single.php
+		green-farm\theme-framework\theme-style\postType\portfolio\project-single.php
+		green-farm\theme-framework\theme-style\postType\profile\profile-single.php
+		
+
+--------------------------------------
+Version 1.0.6: files operations:
+		
+  Theme Files edited:
+		green-farm\js\scrollspy.js
+		green-farm\readme.txt
+		green-farm\style.css
+		green-farm\theme-framework\languages\green-farm.pot
+		green-farm\theme-framework\plugin-activator.php
+		green-farm\theme-framework\plugins\LayerSlider.zip
+		green-farm\theme-framework\plugins\revslider.zip
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\shortcodes\cmsmasters-blog.php
+		green-farm\theme-framework\theme-style\css\less\style.less
+		green-farm\theme-framework\theme-style\css\style.css
+		green-farm\theme-framework\plugins\envato-market.zip
+
+
+--------------------------------------
+Version 1.0.5: files operations:
+		
+  Theme Files edited:
+		green-farm\theme-framework\plugin-activator.php
+		green-farm\theme-framework\plugins\cmsmasters-contact-form-builder.zip
+		green-farm\theme-framework\plugins\cmsmasters-content-composer.zip
+		green-farm\theme-framework\plugins\LayerSlider.zip
+		green-farm\theme-framework\plugins\revslider.zip
+		green-farm\theme-framework\theme-style\js\jquery.isotope.mode.js
+		green-farm\theme-framework\theme-style\postType\blog\post-puzzle.php
+		green-farm\comments.php
+		green-farm\framework\admin\inc\admin-scripts.php
+		green-farm\framework\admin\inc\config-functions.php
+		green-farm\framework\admin\inc\js\admin-theme-scripts.js
+		green-farm\framework\admin\options\cmsmasters-theme-options-other.php
+		green-farm\framework\admin\options\cmsmasters-theme-options-post.php
+		green-farm\framework\admin\options\cmsmasters-theme-options-project.php
+		green-farm\framework\admin\options\cmsmasters-theme-options.php
+		green-farm\framework\admin\options\js\cmsmasters-theme-options-toggle.js
+		green-farm\framework\admin\options\js\cmsmasters-theme-options.js
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-demo.php
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-element.php
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-general.php
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-single.php
+		green-farm\framework\admin\settings\cmsmasters-theme-settings.php
+		green-farm\framework\admin\settings\css\cmsmasters-theme-settings-rtl.css
+		green-farm\framework\admin\settings\css\cmsmasters-theme-settings.css
+		green-farm\framework\admin\settings\inc\cmsmasters-helper-functions.php
+		green-farm\framework\admin\settings\js\cmsmasters-theme-settings.js
+		green-farm\framework\class\browser.php
+		green-farm\framework\function\breadcrumbs.php
+		green-farm\framework\function\general-functions.php
+		green-farm\framework\function\likes.php
+		green-farm\framework\function\pagination.php
+		green-farm\framework\function\theme-categories-icon.php
+		green-farm\js\jquery.iLightBox.min.js
+		green-farm\js\jquery.isotope.min.js
+		green-farm\js\jquery.script.js
+		green-farm\readme.txt
+		green-farm\style.css
+		green-farm\theme-framework\languages\green-farm.pot
+		green-farm\theme-framework\theme-style\admin\theme-settings-defaults.php
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\shortcodes\cmsmasters-blog.php
+		green-farm\theme-framework\theme-style\css\adaptive.css
+		green-farm\theme-framework\theme-style\css\less\adaptive.less
+		green-farm\theme-framework\theme-style\css\less\style.less
+		green-farm\theme-framework\theme-style\css\style.css
+		green-farm\theme-framework\theme-style\css\styles\green-farm.css
+		green-farm\theme-framework\theme-style\function\template-functions-post.php
+		green-farm\theme-framework\theme-style\function\template-functions-profile.php
+		green-farm\theme-framework\theme-style\function\template-functions-project.php
+		green-farm\theme-framework\theme-style\function\template-functions-shortcodes.php
+		green-farm\theme-framework\theme-style\function\theme-colors-primary.php
+		green-farm\theme-framework\theme-style\js\jquery.theme-script.js
+		green-farm\theme-framework\theme-style\postType\blog\post-default.php
+		green-farm\theme-framework\theme-style\template\archive.php
+		green-farm\theme-framework\theme-style\template\header-mid.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\cmsmasters-c-c\cmsmasters-c-c-plugin-shortcodes.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\less\plugin-adaptive.less
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\less\plugin-style.less
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\plugin-adaptive.css
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\plugin-style.css
+		green-farm\woocommerce\cmsmasters-framework\theme-style\function\plugin-template-functions.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\content-single-product.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product-reviews.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product\product-image.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product\product-thumbnails.php
+		green-farm\woocommerce\single-product-reviews.php
+		green-farm\woocommerce\single-product\product-image.php
+
+		
+  Theme Files removed:
+		green-farm\js\jqueryLibraries.min.js
+		green-farm\js\jsLibraries.min.js
+
+  Theme Files added:
+		green-farm\js\cmsmasters-hover-slider.min.js
+		green-farm\js\debounced-resize.min.js
+		green-farm\js\easing.min.js
+		green-farm\js\easy-pie-chart.min.js
+		green-farm\js\modernizr.min.js
+		green-farm\js\mousewheel.min.js
+		green-farm\js\owlcarousel.min.js
+		green-farm\js\query-loader.min.js
+		green-farm\js\request-animation-frame.min.js
+		green-farm\js\respond.min.js
+		green-farm\js\scroll-to.min.js
+		green-farm\js\scrollspy.js
+		green-farm\js\stellar.min.js
+		green-farm\js\waypoints.min.js
+
+		
+--------------------------------------
+Version 1.0.3: files operations:
+		
+  Theme Files edited:
+		green-farm\framework\admin\settings\cmsmasters-theme-settings.php
+		green-farm\framework\function\breadcrumbs.php
+		green-farm\framework\function\general-functions.php
+		green-farm\js\jquery.isotope.min.js
+		green-farm\js\jqueryLibraries.min.js
+		green-farm\style.css
+		green-farm\theme-framework\plugin-activator.php
+		green-farm\theme-framework\plugins\cmsmasters-content-composer.zip
+		green-farm\theme-framework\plugins\LayerSlider.zip
+		green-farm\theme-framework\plugins\revslider.zip
+		green-farm\theme-framework\theme-style\css\less\style.less
+		green-farm\theme-framework\theme-style\js\jquery.isotope.mode.js
+		green-farm\comments.php
+		green-farm\framework\admin\inc\admin-scripts.php
+		green-farm\framework\admin\inc\config-functions.php
+		green-farm\framework\admin\inc\js\admin-theme-scripts.js
+		green-farm\framework\admin\options\cmsmasters-theme-options-other.php
+		green-farm\framework\admin\options\cmsmasters-theme-options-post.php
+		green-farm\framework\admin\options\cmsmasters-theme-options.php
+		green-farm\framework\admin\options\js\cmsmasters-theme-options.js
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-demo.php
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-element.php
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-general.php
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-single.php
+		green-farm\framework\admin\settings\css\cmsmasters-theme-settings-rtl.css
+		green-farm\framework\admin\settings\css\cmsmasters-theme-settings.css
+		green-farm\framework\admin\settings\inc\cmsmasters-helper-functions.php
+		green-farm\framework\admin\settings\js\cmsmasters-theme-settings.js
+		green-farm\framework\class\browser.php
+		green-farm\framework\function\pagination.php
+		green-farm\framework\function\theme-categories-icon.php
+		green-farm\theme-framework\theme-style\css\adaptive.css
+		green-farm\theme-framework\theme-style\css\less\adaptive.less
+		green-farm\theme-framework\theme-style\css\style.css
+		green-farm\theme-framework\theme-style\function\template-functions-single.php
+		green-farm\theme-framework\theme-style\function\template-functions.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product-reviews.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\less\plugin-adaptive.less
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\less\plugin-style.less
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\plugin-adaptive.css
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\plugin-style.css
+		green-farm\framework\admin\options\cmsmasters-theme-options-project.php
+		green-farm\framework\admin\options\js\cmsmasters-theme-options-toggle.js
+		green-farm\theme-framework\plugins\cmsmasters-contact-form-builder.zip
+		green-farm\theme-framework\plugins\cmsmasters-mega-menu.zip
+		green-farm\theme-framework\theme-style\postType\portfolio\project-single.php
+		green-farm\woocommerce\single-product\product-image.php
+		green-farm\woocommerce\single-product\product-thumbnails.php
+		green-farm\theme-framework\languages\green-farm.pot
+		green-farm\readme.txt
+		green-farm\theme-framework\theme-style\css\styles\green-farm.css
+		
+		
+  Theme Files deleted:
+		green-farm\css\jquery.isotope.css
+		
+		
+--------------------------------------
+Version 1.0.2: files operations:
+
+  Theme Files edited:
+		
+		green-farm\404.php
+		green-farm\archive.php
+		green-farm\author.php
+		green-farm\comments.php
+		green-farm\footer.php
+		green-farm\framework\admin\inc\admin-scripts.php
+		green-farm\framework\admin\inc\config-functions.php
+		green-farm\framework\admin\inc\js\admin-theme-scripts.js
+		green-farm\framework\admin\options\cmsmasters-theme-options-other.php
+		green-farm\framework\admin\options\cmsmasters-theme-options.php
+		green-farm\framework\admin\options\js\cmsmasters-theme-options.js
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-demo.php
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-general.php
+		green-farm\framework\admin\settings\cmsmasters-theme-settings.php
+		green-farm\framework\admin\settings\css\cmsmasters-theme-settings-rtl.css
+		green-farm\framework\admin\settings\css\cmsmasters-theme-settings.css
+		green-farm\framework\admin\settings\inc\cmsmasters-helper-functions.php
+		green-farm\framework\admin\settings\js\cmsmasters-theme-settings.js
+		green-farm\framework\class\browser.php
+		green-farm\framework\function\breadcrumbs.php
+		green-farm\framework\function\general-functions.php
+		green-farm\framework\function\pagination.php
+		green-farm\framework\function\theme-categories-icon.php
+		green-farm\functions.php
+		green-farm\header.php
+		green-farm\index.php
+		green-farm\js\jquery.iLightBox.min.js
+		green-farm\js\jquery.script.js
+		green-farm\js\jqueryLibraries.min.js
+		green-farm\page.php
+		green-farm\readme.txt
+		green-farm\search.php
+		green-farm\sidebar.php
+		green-farm\single-profile.php
+		green-farm\single-project.php
+		green-farm\single.php
+		green-farm\sitemap.php
+		green-farm\style.css
+		green-farm\theme-framework\languages\green-farm.pot
+		green-farm\theme-framework\plugin-activator.php
+		green-farm\theme-framework\theme-style\admin\theme-options.php
+		green-farm\theme-framework\theme-style\admin\theme-settings-defaults.php
+		green-farm\theme-framework\theme-style\admin\theme-settings.php
+		green-farm\theme-framework\theme-style\class\theme-widgets.php
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\cmsmasters-c-c-theme-functions.php
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\cmsmasters-c-c-theme-shortcodes.php
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\js\cmsmasters-c-c-theme-extend.js
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\shortcodes\cmsmasters-blog.php
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\shortcodes\cmsmasters-counter.php
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\shortcodes\cmsmasters-counters.php
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\shortcodes\cmsmasters-featured-block.php
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\shortcodes\cmsmasters-posts-slider.php
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\shortcodes\cmsmasters-pricing-table-item.php
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\shortcodes\cmsmasters-quote.php
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\shortcodes\cmsmasters-quotes.php
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\shortcodes\cmsmasters-stat.php
+		green-farm\theme-framework\theme-style\cmsmasters-c-c\shortcodes\cmsmasters-tab.php
+		green-farm\theme-framework\theme-style\css\adaptive.css
+		green-farm\theme-framework\theme-style\css\less\adaptive.less
+		green-farm\theme-framework\theme-style\css\less\style.less
+		green-farm\theme-framework\theme-style\css\retina.css
+		green-farm\theme-framework\theme-style\css\rtl.css
+		green-farm\theme-framework\theme-style\css\style.css
+		green-farm\theme-framework\theme-style\css\styles\green-farm.css
+		green-farm\theme-framework\theme-style\function\single-comment.php
+		green-farm\theme-framework\theme-style\function\template-functions-post.php
+		green-farm\theme-framework\theme-style\function\template-functions-profile.php
+		green-farm\theme-framework\theme-style\function\template-functions-project.php
+		green-farm\theme-framework\theme-style\function\template-functions-shortcodes.php
+		green-farm\theme-framework\theme-style\function\template-functions-single.php
+		green-farm\theme-framework\theme-style\function\template-functions.php
+		green-farm\theme-framework\theme-style\function\theme-colors-primary.php
+		green-farm\theme-framework\theme-style\function\theme-colors-secondary.php
+		green-farm\theme-framework\theme-style\function\theme-fonts.php
+		green-farm\theme-framework\theme-style\js\jquery.isotope.mode.js
+		green-farm\theme-framework\theme-style\js\jquery.theme-script.js
+		green-farm\theme-framework\theme-style\postType\blog\post-default.php
+		green-farm\theme-framework\theme-style\postType\blog\post-masonry.php
+		green-farm\theme-framework\theme-style\postType\blog\post-puzzle.php
+		green-farm\theme-framework\theme-style\postType\blog\post-single.php
+		green-farm\theme-framework\theme-style\postType\blog\post-timeline.php
+		green-farm\theme-framework\theme-style\postType\portfolio\project-grid.php
+		green-farm\theme-framework\theme-style\postType\portfolio\project-puzzle.php
+		green-farm\theme-framework\theme-style\postType\portfolio\project-single.php
+		green-farm\theme-framework\theme-style\postType\posts-slider\slider-post.php
+		green-farm\theme-framework\theme-style\postType\posts-slider\slider-project.php
+		green-farm\theme-framework\theme-style\postType\profile\profile-horizontal.php
+		green-farm\theme-framework\theme-style\postType\profile\profile-single.php
+		green-farm\theme-framework\theme-style\postType\profile\profile-vertical.php
+		green-farm\theme-framework\theme-style\postType\quote\quote-grid.php
+		green-farm\theme-framework\theme-style\postType\quote\quote-slider-box.php
+		green-farm\theme-framework\theme-style\postType\quote\quote-slider-center.php
+		green-farm\theme-framework\theme-style\template\404.php
+		green-farm\theme-framework\theme-style\template\archive.php
+		green-farm\theme-framework\theme-style\template\footer.php
+		green-farm\theme-framework\theme-style\template\header-bot.php
+		green-farm\theme-framework\theme-style\template\header-mid.php
+		green-farm\theme-framework\theme-style\template\header-top.php
+		green-farm\theme-framework\theme-style\theme-functions.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\admin\plugin-settings.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\cmsmasters-plugin-functions.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\css\less\plugin-adaptive.less
+		green-farm\tribe-events\cmsmasters-framework\theme-style\css\less\plugin-style.less
+		green-farm\tribe-events\cmsmasters-framework\theme-style\css\plugin-adaptive.css
+		green-farm\tribe-events\cmsmasters-framework\theme-style\css\plugin-rtl.css
+		green-farm\tribe-events\cmsmasters-framework\theme-style\css\plugin-style.css
+		green-farm\tribe-events\cmsmasters-framework\theme-style\function\plugin-colors.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\function\plugin-fonts.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\day\single-event.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\default-template.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\list\single-event.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\modules\bar.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\modules\meta.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\modules\meta\details.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\modules\meta\organizer.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\modules\meta\venue.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\month\single-event.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\month\tooltip.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\map\single-event.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\modules\meta\additional-fields.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\photo\content.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\photo\single-event.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\related-events.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\single-organizer.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\single-venue.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\week\single-event.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\week\tooltip.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\widgets\list-widget.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\widgets\modules\single-event.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\widgets\this-week\single-event.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\pro\widgets\venue-widget.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\single-event.php
+		green-farm\tribe-events\cmsmasters-framework\theme-style\templates\widgets\list-widget.php
+		green-farm\tribe-events\day\single-event.php
+		green-farm\tribe-events\default-template.php
+		green-farm\tribe-events\list\single-event.php
+		green-farm\tribe-events\modules\bar.php
+		green-farm\tribe-events\modules\meta.php
+		green-farm\tribe-events\modules\meta\details.php
+		green-farm\tribe-events\modules\meta\organizer.php
+		green-farm\tribe-events\modules\meta\venue.php
+		green-farm\tribe-events\month\single-event.php
+		green-farm\tribe-events\month\tooltip.php
+		green-farm\tribe-events\pro\map\single-event.php
+		green-farm\tribe-events\pro\modules\meta\additional-fields.php
+		green-farm\tribe-events\pro\photo\content.php
+		green-farm\tribe-events\pro\photo\single-event.php
+		green-farm\tribe-events\pro\related-events.php
+		green-farm\tribe-events\pro\single-organizer.php
+		green-farm\tribe-events\pro\single-venue.php
+		green-farm\tribe-events\pro\week\single-event.php
+		green-farm\tribe-events\pro\week\tooltip.php
+		green-farm\tribe-events\pro\widgets\list-widget.php
+		green-farm\tribe-events\pro\widgets\modules\single-event.php
+		green-farm\tribe-events\pro\widgets\this-week\single-event.php
+		green-farm\tribe-events\pro\widgets\venue-widget.php
+		green-farm\tribe-events\single-event.php
+		green-farm\tribe-events\widgets\list-widget.php
+		green-farm\woocommerce\archive-product.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\admin\plugin-options.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\cmsmasters-c-c\cmsmasters-c-c-plugin-functions.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\cmsmasters-c-c\cmsmasters-c-c-plugin-shortcodes.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\cmsmasters-c-c\js\cmsmasters-c-c-plugin-extend.js
+		green-farm\woocommerce\cmsmasters-framework\theme-style\cmsmasters-plugin-functions.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\less\plugin-adaptive.less
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\less\plugin-style.less
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\plugin-adaptive.css
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\plugin-rtl.css
+		green-farm\woocommerce\cmsmasters-framework\theme-style\css\plugin-style.css
+		green-farm\woocommerce\cmsmasters-framework\theme-style\function\plugin-colors.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\function\plugin-fonts.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\function\plugin-template-functions.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\js\jquery.plugin-script.js
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\archive-product.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\content-product.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\content-single-product.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\content-widget-product.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\global\sidebar.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\global\wrapper-end.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\global\wrapper-start.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\loop\loop-start.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\loop\pagination.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\product-searchform.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product-reviews.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product\meta.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product\product-image.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product\product-thumbnails.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product\review.php
+		green-farm\woocommerce\cmsmasters-framework\theme-style\templates\single-product\tabs\tabs.php
+		green-farm\woocommerce\content-product.php
+		green-farm\woocommerce\content-single-product.php
+		green-farm\woocommerce\content-widget-product.php
+		green-farm\woocommerce\global\sidebar.php
+		green-farm\woocommerce\global\wrapper-end.php
+		green-farm\woocommerce\global\wrapper-start.php
+		green-farm\woocommerce\loop\loop-start.php
+		green-farm\woocommerce\loop\pagination.php
+		green-farm\woocommerce\product-searchform.php
+		green-farm\woocommerce\single-product-reviews.php
+		green-farm\woocommerce\single-product.php
+		green-farm\woocommerce\single-product\meta.php
+		green-farm\woocommerce\single-product\product-image.php
+		green-farm\woocommerce\single-product\product-thumbnails.php
+		green-farm\woocommerce\single-product\review.php
+		green-farm\woocommerce\single-product\tabs\tabs.php
+		green-farm\theme-framework\plugins\cmsmasters-contact-form-builder.zip
+		green-farm\theme-framework\plugins\cmsmasters-content-composer.zip
+		green-farm\theme-framework\plugins\cmsmasters-mega-menu.zip
+		green-farm\theme-framework\plugins\LayerSlider.zip
+		green-farm\theme-framework\plugins\revslider.zip
+		
+		
+  Theme Files deleted:
+		green-farm\css\styles\green-farm.css
+		green-farm\framework\class\OAuth.php
+		green-farm\framework\class\twitteroauth.php
+		green-farm\rtl.css
+		green-farm\searchform.php
+		green-farm\theme-framework\admin\fonts\config-custom.json
+		green-farm\theme-framework\admin\plugin-activator.php
+		green-farm\theme-framework\admin\plugins\cmsmasters-contact-form-builder.zip
+		green-farm\theme-framework\admin\plugins\cmsmasters-content-composer.zip
+		green-farm\theme-framework\admin\plugins\cmsmasters-mega-menu.zip
+		green-farm\theme-framework\admin\plugins\LayerSlider.zip
+		green-farm\theme-framework\admin\plugins\revslider.zip
+		green-farm\theme-framework\admin\theme-options.php
+		green-farm\theme-framework\admin\theme-settings-defaults.php
+		green-farm\theme-framework\admin\theme-settings.php
+		green-farm\theme-framework\class\theme-widgets.php
+		green-farm\theme-framework\cmsmasters-c-c\cmsmasters-c-c-theme-functions.php
+		green-farm\theme-framework\cmsmasters-c-c\cmsmasters-c-c-theme-shortcodes.php
+		green-farm\theme-framework\cmsmasters-c-c\js\cmsmasters-c-c-theme-extend.js
+		green-farm\theme-framework\cmsmasters-c-c\shortcodes\cmsmasters-blog.php
+		green-farm\theme-framework\cmsmasters-c-c\shortcodes\cmsmasters-counter.php
+		green-farm\theme-framework\cmsmasters-c-c\shortcodes\cmsmasters-counters.php
+		green-farm\theme-framework\cmsmasters-c-c\shortcodes\cmsmasters-featured-block.php
+		green-farm\theme-framework\cmsmasters-c-c\shortcodes\cmsmasters-posts-slider.php
+		green-farm\theme-framework\cmsmasters-c-c\shortcodes\cmsmasters-pricing-table-item.php
+		green-farm\theme-framework\cmsmasters-c-c\shortcodes\cmsmasters-quote.php
+		green-farm\theme-framework\cmsmasters-c-c\shortcodes\cmsmasters-quotes.php
+		green-farm\theme-framework\cmsmasters-c-c\shortcodes\cmsmasters-stat.php
+		green-farm\theme-framework\cmsmasters-c-c\shortcodes\cmsmasters-tab.php
+		green-farm\theme-framework\css\adaptive.css
+		green-farm\theme-framework\css\fontello-custom.css
+		green-farm\theme-framework\css\fonts\fontello-custom.eot
+		green-farm\theme-framework\css\fonts\fontello-custom.svg
+		green-farm\theme-framework\css\fonts\fontello-custom.ttf
+		green-farm\theme-framework\css\fonts\fontello-custom.woff
+		green-farm\theme-framework\css\less\adaptive.less
+		green-farm\theme-framework\css\less\general.less
+		green-farm\theme-framework\css\less\style.less
+		green-farm\theme-framework\css\retina.css
+		green-farm\theme-framework\function\single-comment.php
+		green-farm\theme-framework\function\template-functions-post.php
+		green-farm\theme-framework\function\template-functions-profile.php
+		green-farm\theme-framework\function\template-functions-project.php
+		green-farm\theme-framework\function\template-functions-shortcodes.php
+		green-farm\theme-framework\function\template-functions-single.php
+		green-farm\theme-framework\function\template-functions.php
+		green-farm\theme-framework\function\theme-colors-primary.php
+		green-farm\theme-framework\function\theme-colors-secondary.php
+		green-farm\theme-framework\function\theme-fonts.php
+		green-farm\theme-framework\img\logo.png
+		green-farm\theme-framework\img\logo_footer.png
+		green-farm\theme-framework\img\logo_footer_retina.png
+		green-farm\theme-framework\img\logo_retina.png
+		green-farm\theme-framework\js\jquery.isotope.mode.js
+		green-farm\theme-framework\js\jquery.theme-script.js
+		green-farm\theme-framework\postType\blog\post-default.php
+		green-farm\theme-framework\postType\blog\post-masonry.php
+		green-farm\theme-framework\postType\blog\post-puzzle.php
+		green-farm\theme-framework\postType\blog\post-single.php
+		green-farm\theme-framework\postType\blog\post-timeline.php
+		green-farm\theme-framework\postType\portfolio\project-grid.php
+		green-farm\theme-framework\postType\portfolio\project-puzzle.php
+		green-farm\theme-framework\postType\portfolio\project-single.php
+		green-farm\theme-framework\postType\posts-slider\slider-post.php
+		green-farm\theme-framework\postType\posts-slider\slider-project.php
+		green-farm\theme-framework\postType\profile\profile-horizontal.php
+		green-farm\theme-framework\postType\profile\profile-single.php
+		green-farm\theme-framework\postType\profile\profile-vertical.php
+		green-farm\theme-framework\postType\quote\quote-grid.php
+		green-farm\theme-framework\postType\quote\quote-slider-box.php
+		green-farm\theme-framework\postType\quote\quote-slider-center.php
+		green-farm\theme-framework\template\archive.php
+		green-farm\theme-framework\template\footer.php
+		green-farm\theme-framework\template\header-bot.php
+		green-farm\theme-framework\template\header-mid.php
+		green-farm\theme-framework\template\header-top.php
+		green-farm\theme-framework\theme-functions.php
+		green-farm\tribe-events\cmsmasters-framework\admin\plugin-settings.php
+		green-farm\tribe-events\cmsmasters-framework\css\less\plugin-adaptive.less
+		green-farm\tribe-events\cmsmasters-framework\css\less\plugin-style.less
+		green-farm\tribe-events\cmsmasters-framework\css\plugin-adaptive.css
+		green-farm\tribe-events\cmsmasters-framework\css\plugin-rtl.css
+		green-farm\tribe-events\cmsmasters-framework\css\plugin-style.css
+		green-farm\tribe-events\cmsmasters-framework\function\plugin-colors.php
+		green-farm\tribe-events\cmsmasters-framework\function\plugin-fonts.php
+		green-farm\tribe-events\cmsmasters-plugin-functions.php
+		green-farm\woocommerce\cmsmasters-framework\cmsmasters-c-c\cmsmasters-c-c-plugin-functions.php
+		green-farm\woocommerce\cmsmasters-framework\cmsmasters-c-c\cmsmasters-c-c-plugin-shortcodes.php
+		green-farm\woocommerce\cmsmasters-framework\cmsmasters-c-c\js\cmsmasters-c-c-plugin-extend.js
+		green-farm\woocommerce\cmsmasters-framework\css\less\plugin-adaptive.less
+		green-farm\woocommerce\cmsmasters-framework\css\less\plugin-style.less
+		green-farm\woocommerce\cmsmasters-framework\css\plugin-adaptive.css
+		green-farm\woocommerce\cmsmasters-framework\css\plugin-rtl.css
+		green-farm\woocommerce\cmsmasters-framework\css\plugin-style.css
+		green-farm\woocommerce\cmsmasters-framework\function\plugin-colors.php
+		green-farm\woocommerce\cmsmasters-framework\function\plugin-fonts.php
+		green-farm\woocommerce\cmsmasters-framework\function\plugin-template-functions.php
+		green-farm\woocommerce\cmsmasters-framework\js\jquery.plugin-script.js
+		green-farm\woocommerce\cmsmasters-plugin-functions.php
+		
+
+--------------------------------------
+Version 1.0.1: files operations:
+
+  Theme Files edited:
+
+		green-farm\footer.php
+		green-farm\framework\admin\options\cmsmasters-theme-options.php
+		green-farm\framework\admin\options\js\cmsmasters-theme-options.js
+		green-farm\framework\admin\settings\cmsmasters-theme-settings-general.php
+		green-farm\framework\function\breadcrumbs.php
+		green-farm\framework\function\general-functions.php
+		green-farm\functions.php
+		green-farm\js\jquery.script.js
+		green-farm\js\jqueryLibraries.min.js
+		green-farm\style.css
+		green-farm\theme-framework\cmsmasters-c-c\shortcodes\cmsmasters-blog.php
+		green-farm\theme-framework\css\adaptive.css
+		green-farm\theme-framework\css\less\adaptive.less
+		green-farm\theme-framework\css\less\style.less
+		green-farm\theme-framework\function\template-functions-profile.php
+		green-farm\theme-framework\js\jquery.isotope.mode.js
+		green-farm\theme-framework\js\jquery.theme-script.js
+		green-farm\theme-framework\languages\green-farm.pot
+		green-farm\theme-framework\postType\blog\post-masonry.php
+		green-farm\theme-framework\postType\blog\post-timeline.php
+		green-farm\theme-framework\postType\profile\profile-horizontal.php
+		green-farm\theme-framework\postType\profile\profile-single.php
+		green-farm\theme-framework\postType\profile\profile-vertical.php
+		green-farm\theme-framework\postType\quote\quote-grid.php
+		green-farm\theme-framework\postType\quote\quote-slider-box.php
+		green-farm\theme-framework\postType\quote\quote-slider-center.php
+		green-farm\theme-framework\template\footer.php
+		green-farm\theme-framework\theme-functions.php
+		green-farm\tribe-events\cmsmasters-framework\css\less\plugin-style.less
+		green-farm\tribe-events\cmsmasters-framework\css\plugin-style.css
+		green-farm\tribe-events\cmsmasters-plugin-functions.php
+		green-farm\tribe-events\pro\widgets\modules\single-event.php
+		green-farm\tribe-events\single-event.php
+		green-farm\woocommerce\cmsmasters-framework\cmsmasters-c-c\cmsmasters-c-c-plugin-functions.php
+		green-farm\woocommerce\cmsmasters-framework\cmsmasters-c-c\js\cmsmasters-c-c-plugin-extend.js
+		green-farm\woocommerce\cmsmasters-framework\css\less\plugin-adaptive.less
+		green-farm\woocommerce\cmsmasters-framework\css\plugin-adaptive.css
+		green-farm\woocommerce\single-product-reviews.php
+		green-farm\readme.txt
+		green-farm\theme-framework\admin\plugin-activator.php
+		green-farm\theme-framework\admin\plugins\LayerSlider.zip
+		green-farm\theme-framework\admin\plugins\revslider.zip
+		green-farm\theme-framework\function\template-functions.php
+		green-farm\theme-framework\template\header-mid.php
+		green-farm\woocommerce\cmsmasters-framework\function\plugin-template-functions.php
+		green-farm\theme-framework\admin\plugins\cmsmasters-content-composer.zip
+
+  Theme Files deleted:
+		
+		green-farm\framework\class\widgets.php
+		
+
+
+--------------------------------------
+Version 1.0: Release!
+
