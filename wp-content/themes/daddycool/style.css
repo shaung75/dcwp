@@ -14,8 +14,41 @@ Tags: one-column, two-columns, three-columns, four-columns, left-sidebar, right-
 
 .header_mid_outer {
   /*background: radial-gradient(#709733, #333333);*/
-  background: radial-gradient( circle 300px, #709733, #333333);
+  /* background: radial-gradient( circle 300px, #709733, #1E191A);*/
 }
+.header_mid .header_mid_inner {
+  padding-bottom: 10px;
+}
+
+.rip-bottom, .rip-section:before {
+  height: 20px;
+  background: url('assets/rip-bottom.png') repeat-x;
+}
+
+.rip-top, .rip-section:after {
+  height: 20px;
+  background: url('assets/rip-top.png') repeat-x;
+}
+
+.rip-section {
+  position: relative;
+  margin: 20px 0px;
+}
+
+.rip-section:before, .rip-section:after {
+  content: " ";
+  display: block;
+  width: 100%;
+  position: absolute;
+}
+
+.rip-section:after {
+  bottom: -20px;
+}
+.rip-section:before {
+  top: -20px;
+}
+
 
 .single-tribe_events .headline_outer {
   
