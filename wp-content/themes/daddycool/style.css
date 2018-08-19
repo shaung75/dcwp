@@ -12,8 +12,21 @@ Text Domain: daddy-cool
 Tags: one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 */
 
+.cmsmasters_products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cmsmasters_product {
+  margin-bottom: 40px;
+}
 .cmsmasters_product .cmsmasters_product_img {
   border: 1px solid #ccc;
+}
+.dc-buttons {
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 }
 .header_mid_outer {
   /*background: radial-gradient(#709733, #333333);*/
