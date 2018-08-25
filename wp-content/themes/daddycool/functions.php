@@ -25,9 +25,12 @@ if (!function_exists('loop_columns')) {
     return 3; // 3 products per row
   }
 }
-/*
+
 function dc_template_loop_add_to_cart() {
-  echo "<p>hello world</p>";
+  global $product;
+  
+  if($product->add_to_cart_text() !== "Select options") {
+    echo '<a href="'.get_the_permalink().'" class="button dc-view">View</a>';
+  }
 }
 add_action( 'woocommerce_after_shop_loop_item', 'dc_template_loop_add_to_cart', 10 );
-*/

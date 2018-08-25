@@ -28,6 +28,23 @@ Tags: one-column, two-columns, three-columns, four-columns, left-sidebar, right-
   bottom: 0px;
   width: 100%;
 }
+.dc-buttons .add_to_cart_button {
+  background: #333333;
+  color: #ffffff;
+}
+.dc-buttons .add_to_cart_button:hover {
+  background: #92b955;
+}
+.dc-buttons .button {
+  border-radius: 0px;
+}
+.dc-view {
+  background:#92b955;
+  color: #ffffff;
+}
+.dc-view:hover {
+  background: #333333;
+}
 .header_mid_outer {
   /*background: radial-gradient(#709733, #333333);*/
   /* background: radial-gradient( circle 300px, #709733, #1E191A);*/
@@ -35,7 +52,9 @@ Tags: one-column, two-columns, three-columns, four-columns, left-sidebar, right-
 .header_mid .header_mid_inner {
   padding-bottom: 10px;
 }
-
+.ilightbox-holder.dark .ilightbox-container  .ilightbox-caption {
+  color: #fff;
+}
 .rip-bottom, .rip-section:before {
   height: 20px;
   background: url('assets/rip-bottom.png') repeat-x;
@@ -76,6 +95,27 @@ Tags: one-column, two-columns, three-columns, four-columns, left-sidebar, right-
 .rip-section:before {
   top: -20px;
 }
+
+.wc-forward {
+  display: none;
+}
+.wpurp-recipe-ingredient-container {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.wpurp-recipe-ingredient-name a {
+  font-family: inherit;
+  font-style: inherit;
+}
+.wpurp-columns td {
+  width: auto !important;
+}
+.wpurp-columns .wpurp-columns td {
+  width: 400px !important;
+}
+
 
 .stock.in-stock { display: none; }
 
